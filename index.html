@@ -70,7 +70,7 @@ async function sendMessage() {
   input.value = '';
   const typingNode = showTyping();
   try {
-    const resp = await fetch(`https://your-project.vercel.app/api/qwen?text=${encodeURIComponent(text)}`);
+    const resp = await fetch(`https://ai-dex-five.vercel.app/api/qwen?text=${encodeURIComponent(text)}`);
     const data = await resp.json();
     removeTyping();
     renderMessage(data.reply || '[no reply]');
